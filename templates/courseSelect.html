@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <script src="../static/js/courseScript.js"></script>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="../static/css/courseStyle.css">
+        <link rel="stylesheet" href="../static/css/vividButton.css">
+
+        <title>课程选择</title>
+    </head>
+
+    <body>
+        <div class="head-bar">
+            <a href="/userPage">
+                <img class="user" src="../static/images/user.png">
+            </a>
+            课程中心
+            <a href="javascript:void(0)">
+                <img class="addCourse"  onclick = "popWin();" src="../static/images/bubble-add.png">
+            </a>
+        </div>
+        <div class="non-course-info">
+            还没有任何课程哦，点击右上角添加吧~
+        </div>
+
+        <div id="light" class="pop_win">
+            <form class = "button-container" id="form1" method="post" action="/liveSetting">
+                
+                <input class="roleInfo" name="uType" style="display: none;" value="{{uType}}">  <!--记录用户属性：师/生-->
+
+                <div class="wrapper">
+                    <a href="###" onclick="form1.submit()" class="fancy-button pop-onhover bg-gradient3"><span>临时课堂</span></a>
+                </div>
+                <div class="wrapper">
+                    <a href="###" class="fancy-button pop-onhover bg-gradient4"><span>长期课程</span></a>
+                </div>
+            </form>
+        </div>
+        <div id="fade" onclick="closeWin();" class="black_overlay"></div>
+    </body>
+</html>

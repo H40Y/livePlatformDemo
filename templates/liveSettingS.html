@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <script src="../static/js/courseScript.js"></script>
+        <link rel="stylesheet" href="../static/css/liveSetStyle.css">
+
+        <title>课堂设置</title>
+    </head>
+
+    <body>
+        <div class="head-bar">
+            <a href="/userPage">
+                <img class="user" src="../static/images/user.png">
+            </a>
+        </div>
+
+        <div class="content-container">
+            <div class="info">
+                <div class="number">学海无涯苦作舟</div>
+                <div class="tip">请在下方输入老师提供的课堂号~</div> 
+                <hr>
+            </div>
+            <form id="form1" method="post" action="/startLive">
+
+                <input class="typeInfo" name="uType" style="display: none;" value="S">
+
+                <div>
+                    <input type="text" class="name" name="cId" autocomplete="off" placeholder="课堂号">
+                </div>
+                <div>
+                    <input type="text" class="name" name="uName" autocomplete="off" placeholder="您的昵称">
+                </div>
+                
+                <div class="btn-container">
+                    <input type="button" class="button" onclick="form1.submit()" value="提交">
+                </div>
+                
+            </form>
+        </div>
+    </body>
+</html>

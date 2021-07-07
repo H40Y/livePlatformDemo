@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <link rel="stylesheet" href="../static/css/roleStyle.css">
+        <link rel="stylesheet" href="../static/css/vividButton.css">
+
+        <title>角色选择</title>
+    </head>
+
+    <body>
+        <div class="head-bar">
+            <a href="/userPage">
+                <img class="user" src="../static/images/user.png">
+            </a>
+        </div>
+
+        <div class="uInfo" name="uName" style="display: none;">{{uName}}</div>
+
+        <div class="button-container">
+            <div class="wrapper">
+                <a href="/isStudent" class="fancy-button pop-onhover bg-gradient1"><span>我是学生</span></a>
+            </div>
+            <div class="wrapper">
+                <a href="/isTeacher" class="fancy-button pop-onhover bg-gradient3"><span>我是教师</span></a>
+            </div>
+        </div>
+    </body>
+</html>

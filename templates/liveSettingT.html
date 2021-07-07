@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script src="../static/js/courseScript.js"></script>
+        <link rel="stylesheet" href="../static/css/liveSetStyle.css">
+
+        <title>课堂设置</title>
+    </head>
+
+    <body>
+        <div class="head-bar">
+            <a href="/userPage">
+                <img class="user" src="../static/images/user.png">
+            </a>
+        </div>
+
+        <div class="content-container">
+            <div class="info">
+                <div class="number">您的课堂号：{{id}}</div>
+                <div class="tip">请通知您的学生在临时课堂中输入您的课堂号~</div> 
+                <hr>
+            </div>
+            <form id="form1" method="post" action="/startLive">
+
+                <input class="idInfo" name="cId" style="display: none;" value="{{id}}">
+                <input class="typeInfo" name="uType" style="display: none;" value="T">
+
+                <div>
+                    <input type="text" class="name" name="cName" autocomplete="off" placeholder="课堂名称">
+                </div>
+                <div>
+                    <input type="text" class="name" name="uName" autocomplete="off" placeholder="您的昵称">
+                </div>
+                
+                <div class="btn-container">
+                    <input type="button" class="button1" value="助教设置">
+                    <!-- <input type="button" class="button" value="直播设备设置"> -->
+                    <input type="button" class="button" onclick="form1.submit()" value="开始上课">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

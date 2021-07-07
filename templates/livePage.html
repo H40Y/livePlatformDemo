@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/liveStyle.css" >
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <title>直播页</title>
+    </head>
+    <body>
+
+        <div class="container1">
+
+            <!-- 主直播窗口 -->
+            <div class="mainWindow">
+                <a href="###">
+                    <img class="back" src="../static/images/arrow-left.png">
+                </a>
+
+                <a href="###" onclick="flv_destroy(); flv_load()">
+                    <img class="retry" src="../static/images/retry.png">
+                </a>
+
+                <div class="video-container">
+                    <div>
+                        <video name="videoElement" class="centeredVideo" controls autoplay>
+                            Your browser is too old which doesn't support HTML5 video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 聊天窗口 -->
+            <div class="chatBar">
+
+                <div class="uInfo" id="uType" style="display: none;">{{uType}}</div>
+                <div class="uInfo" id="uName" style="display: none;">{{uName}}</div>
+                
+                <div class = "msg_container" id="msg_container">
+                </div>
+                
+                <div class = "input_area">
+                    <input class="msg" type="text" id="msgLine" autocomplete="off" onkeyup="if(event.keyCode==13) {sendMsg()}">
+                    <a href="javascript:;" onclick="sendMsg()" id="submitbtn">发送</a>
+                </div>
+
+                <script src="../static/js/chat.js"></script>
+
+            </div>
+
+        </div>
+
+        <div class="container2">
+
+            <!-- 功能栏 待实现 -->
+            <div class="functionBar">
+                <div class="bili-flv-controller">
+                    <div class="url-input">
+                        <label for="sURL">Stream URL:</label>
+                        <input id="sURL" type="text" value="http://localhost:8080/live?port=1935&app=http_flv&stream=vedio" />
+                        <button onclick="switch_mds()">Switch to MediaDataSource</button>
+                    </div>
+                    <div id="mediaSourceURL" class="hidden">
+                        <div class="url-input">
+                            <label for="msURL">MediaDataSource JsonURL:</label>
+                            <input id="msURL" type="text" value="http://127.0.0.1/flv/7182741.json" />
+                            <button onclick="switch_url()">Switch to URL</button>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <input type="checkbox" id="isLive" onchange="saveSettings()" checked />
+                        <label for="isLive">isLive</label>
+                        <input type="checkbox" id="withCredentials" onchange="saveSettings()" />
+                        <label for="withCredentials">withCredentials</label>
+                        <input type="checkbox" id="hasAudio" onchange="saveSettings()" />
+                        <label for="hasAudio">hasAudio</label>
+                        <input type="checkbox" id="hasVideo" onchange="saveSettings()" checked />
+                        <label for="hasVideo">hasVideo</label>
+                    </div>
+                    <div class="controls">
+                        <button onclick="flv_load()">Load</button>
+                        <button onclick="flv_start()">Start</button>
+                        <button onclick="flv_pause()">Pause</button>
+                        <button onclick="flv_destroy()">Destroy</button>
+                        <input style="width:100px" type="text" name="seekpoint"/>
+                        <button onclick="flv_seekto()">SeekTo</button>
+                    </div>
+                    <textarea name="logcatbox" class="logcatBox" rows="10" readonly></textarea>
+                </div>
+            </div>
+
+            <!-- 副直播窗口 -->
+            <div class="subWindow">
+
+                <a href="###" onclick="flv_destroy1(); flv_load1()">
+                    <img class="retry" src="../static/images/retry.png">
+                </a>
+
+                <div class="video-container1">
+                    <div>
+                        <video name="videoElement1" class="centeredVideo" controls autoplay>
+                            Your browser is too old which doesn't support HTML5 video.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="../static/js/flv.js"></script>
+        <script src="../static/js/oringinLiveScript.js"></script>
+        <script src="../static/js/subWinLiveScript.js"></script>
+
+    </body>
+</html>

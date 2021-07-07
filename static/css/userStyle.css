@@ -1,0 +1,78 @@
+body {
+    text-align: center;
+}
+
+.head-bar{
+    height: 70px;
+}
+.back {
+    width: 40px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.head-image {
+    margin: 40px auto;
+    width: 20%;
+}
+.head-image .himage {
+    width: 20%;
+}
+.head-image a {
+    text-decoration : none
+}
+
+.user-setting {
+    margin: 20px auto;
+    width: 20%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.user-setting .title{
+    text-align: left;
+    padding-left: 2%;
+    float: left;
+    width: 68%;
+    font-size: 7px;
+    line-height: 30px;
+}
+.user-setting .set-btn{
+    color: #1E88C7;
+    text-align: right;
+    padding-right: 2%;
+    float: right;
+    width: 28%;
+    font-size: 7px;
+    line-height: 30px;
+}
+
+.action {
+    margin: 20px auto;
+    width: 10%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    line-height: 30px;
+}
+.logout{
+    margin: 20px auto;
+    width: 10%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    line-height: 30px;
+    background: rgb(230, 97, 97);
+}
+
+.switch {
+    border: 0;
+    background-color: white;
+}
+.logoutbtn{
+    color: white;
+    font-weight: bolder;
+    border: 0;
+    background-color: rgb(230, 97, 97);
+}
