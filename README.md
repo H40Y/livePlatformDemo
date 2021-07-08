@@ -2,13 +2,13 @@
 
 #### 项目结构
 
-livePlatformDemo
-├─ templates
-	└─ HTML files
-├─ static
-	├─ css
-	└─ js
-└─ py files
+livePlatformDemo  
+├─ templates  
+    └─ HTML files  
+├─ static  
+    ├─ css  
+    └─ js  
+└─ py files  
 
 ---
 
@@ -26,7 +26,7 @@ livePlatformDemo
 > > >
 > > > 此外，Nginx也需要进行配置文件的设置
 > >
-> > [flv.js]([bilibili/flv.js: HTML5 FLV Player (github.com)](https://github.com/bilibili/flv.js))
+> > [flv.js](https://github.com/bilibili/flv.js)
 >
 > 此外，python 3.5还需要安装以下三方库
 >
